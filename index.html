@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Survival Missions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="hud">
+      <div id="stats">
+        <div class="stat">
+          <div class="label">HP</div>
+          <div class="bar">
+            <div class="bar-fill hp" id="health-fill" style="width: 100%"></div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="label">Голод</div>
+          <div class="bar">
+            <div class="bar-fill hunger" id="hunger-fill" style="width: 100%"></div>
+          </div>
+        </div>
+        <div class="inline" id="inventory">Ягоды: <span id="berries-count">0</span></div>
+      </div>
+
+      <div id="mission-panel">
+        <div class="mission-title">Миссия</div>
+        <div class="mission-desc" id="mission-desc">—</div>
+        <div class="mission-progress" id="mission-progress">—</div>
+        <div class="mission-progress" id="wave-info">Волны: —</div>
+      </div>
+
+      <div id="hints">
+        Управление: WASD/стрелки — ходьба, Shift — бег, E — взаимодействие, 1 — съесть ягоду, P — пауза
+      </div>
+    </div>
+
+    <div id="pause-overlay" class="overlay" hidden>
+      <div class="overlay-box">
+        <div class="title">Пауза</div>
+        <div>Нажмите P, чтобы продолжить</div>
+      </div>
+    </div>
+
+    <div id="death-overlay" class="overlay" hidden>
+      <div class="overlay-box">
+        <div class="title">Вы погибли</div>
+        <button id="restart-btn">Играть снова</button>
+      </div>
+    </div>
+
+    <script defer src="game.js"></script>
+  </body>
+  </html>
+
+
