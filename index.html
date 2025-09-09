@@ -23,7 +23,9 @@
             <div class="bar-fill hunger" id="hunger-fill" style="width: 100%"></div>
           </div>
         </div>
-        <div class="inline" id="inventory">Ягоды: <span id="berries-count">0</span></div>
+        <div class="inline" id="inventory"><span id="berries-icon" aria-hidden="true">🍓</span> <span id="berries-count">0</span></div>
+        <div class="inline" id="medkits"><span id="medkits-icon" aria-hidden="true">🩹</span> <span id="medkits-count">0</span></div>
+        <div class="inline" id="freezes"><span id="freezes-icon" aria-hidden="true">❄️</span> <span id="freezes-count">0</span></div>
       </div>
 
       <div id="mission-panel">
@@ -49,6 +51,24 @@
       <div class="overlay-box">
         <div class="title">Вы погибли</div>
         <button id="restart-btn">Играть снова</button>
+      </div>
+    </div>
+
+    <div id="victory-overlay" class="overlay" hidden>
+      <div class="overlay-box">
+        <div class="title">Победа</div>
+        <button id="restart-victory-btn">Играть снова</button>
+      </div>
+    </div>
+
+    <div id="buff-overlay" class="overlay" hidden>
+      <div class="overlay-box">
+        <div class="title">Выберите баф</div>
+        <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap">
+          <button id="buff-speed">Скорость +20%</button>
+          <button id="buff-hp">HP +25 (макс +25)</button>
+          <button id="buff-weapon">Оружие (урон ближн. +100%)</button>
+        </div>
       </div>
     </div>
 
